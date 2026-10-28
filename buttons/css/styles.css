@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+main { margin: 40px; }
+h1 { font-size: 28px; margin-bottom: 40px; }
+.buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+.button_container {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a { display: inline-block; text-decoration: none; }
+a:focus-visible { outline: 2px solid #555; outline-offset: 8px; }
+
+/* Nike: bold lettering and a moving arrow. */
+#btn_nike {
+  color: #111;
+  font-size: 38px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -2px;
+  padding: 12px;
+}
+#btn_nike span { display: inline-block; transition: transform .2s; }
+#btn_nike:hover span, #btn_nike:focus-visible span { transform: translate(6px, -6px); }
+#btn_nike:active { color: #666; }
+
+/* Lyft: pink lettering with a raised shadow on hover. */
+#btn_lyft {
+  color: #d6008b;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -3px;
+  border-radius: 16px;
+  padding: 5px 30px;
+  transition: background-color .2s, color .2s, box-shadow .2s, transform .2s;
+}
+#btn_lyft:hover, #btn_lyft:focus-visible {
+  color: white;
+  background-color: #d6008b;
+  box-shadow: 5px 5px 0 #f5b9df;
+  transform: translate(-3px, -3px);
+}
+#btn_lyft:active { transform: translate(0, 0); box-shadow: none; }
+
+/* NPR: three colored letters that lift one at a time. */
+#btn_npr { display: flex; gap: 4px; padding: 10px; }
+#btn_npr span {
+  width: 40px;
+  height: 45px;
+  line-height: 43px;
+  text-align: center;
+  color: white;
+  font-size: 34px;
+  font-weight: bold;
+  transition: transform .2s;
+}
+#btn_npr .n { background-color: #d62021; }
+#btn_npr .p { background-color: #111; transition-delay: .05s; }
+#btn_npr .r { background-color: #237bbd; transition-delay: .1s; }
+#btn_npr:hover span, #btn_npr:focus-visible span { transform: translateY(-8px); }
+#btn_npr:active span { transform: translateY(0); }
+
+/* The New Yorker: an editorial serif with a simple ink reversal. */
+#btn_newyorker {
+  color: #111;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  text-align: center;
+  padding: 12px 18px;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+  transition: background-color .2s, color .2s;
+}
+#btn_newyorker span { font-size: 24px; font-variant: small-caps; }
+#btn_newyorker:hover, #btn_newyorker:focus-visible { background-color: #111; color: white; }
+#btn_newyorker:active { background-color: #555; }
+
+/* Old Navy: a navy oval that tilts on hover. */
+#btn_oldnavy {
+  background-color: #00285c;
+  color: white;
+  border: 3px solid #00285c;
+  border-radius: 50%;
+  padding: 20px 22px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform .2s, background-color .2s, color .2s;
+}
+#btn_oldnavy:hover, #btn_oldnavy:focus-visible {
+  background-color: white;
+  color: #00285c;
+  transform: rotate(-6deg);
+}
+#btn_oldnavy:active { transform: rotate(0) scale(.95); }
+
+@media (max-width: 600px) {
+  main { margin: 20px; }
+  h1 { font-size: 24px; }
+  .button_container { width: 100%; }
+}
