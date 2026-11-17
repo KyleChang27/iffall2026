@@ -15,3 +15,22 @@ body{background:#121212;color:#f4f1e9}header{border-color:#555}.hero{position:re
 .hand,.hero-copy .hand{font-family:DryBrush,cursive;font-size:40px;font-weight:400;letter-spacing:.025em;line-height:1.25;transform:rotate(-4deg);text-transform:uppercase}
 .small-hand{font-size:31px}
 @media(max-width:650px){.hand,.hero-copy .hand{font-size:30px}.small-hand{font-size:26px}}
+
+/* Initial-build review: readable captions and exhibition hierarchy. */
+.hero-art figcaption{font:700 15px/1.5 'Courier New',monospace;letter-spacing:.065em;color:#f4f1e9;gap:20px}
+.exhibition figcaption{font:600 12px/1.6 'Courier New',monospace;color:#d8d4c8}
+.exhibition-info{margin:30px 0 22px}
+.exhibition .exhibition-venue{font:700 20px/1.4 Arial,Helvetica,sans-serif;margin:0 0 10px;max-width:none}
+.exhibition .exhibition-date{font:400 14px/1.6 'Courier New',monospace;letter-spacing:.02em;color:#f2ce45;margin:0;max-width:none}
+.exhibition .exhibition-description{font:400 17px/1.65 Georgia,'Times New Roman',serif;color:#e3dfd5;margin:0 0 24px;max-width:450px}
+.detail-page .art-grid{column-gap:10%;row-gap:80px}
+.detail-page .art-grid figure:nth-child(n+3){padding-top:0;transform:rotate(-1deg)}
+.detail-page .art-grid figure:nth-child(4){transform:rotate(1deg);padding-top:70px}
+.detail-page .art-grid figcaption .art-source{font:12px/1.6 'Courier New',monospace;color:#c6c1b5;margin-top:20px}
+@media(max-width:650px){
+ .hero-art figcaption{font-size:14px;letter-spacing:.04em;margin-top:22px}
+ .exhibition .exhibition-venue{font-size:19px}
+ .exhibition .exhibition-date{font-size:13px}
+ .exhibition .exhibition-description{font-size:16px}
+ .detail-page .art-grid figure:nth-child(n+2){padding-top:48px}
+}
